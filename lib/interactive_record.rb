@@ -60,9 +60,6 @@ class InteractiveRecord
   def self.find_by(attr_hash) 
     value = attr_hash.values.first
     formatted_val = value.class == Fixnum ? value : "'#{value}'"
-    #if value.class is a Fixnum then formatted_val = value
-    #else false then formatted_val = "'#{value}'"
-    # a string value needs to be in quotes ""
     sql = "SELECT * FROM #{self.table_name} WHERE #{attr_hash.keys.first} = #{formatted_val}"
     DB[:conn].execute(sql)
   end
