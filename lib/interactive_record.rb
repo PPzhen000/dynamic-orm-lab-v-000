@@ -40,15 +40,15 @@ class InteractiveRecord
 
   def values_for_insert
 
-  end 
+  end
 
-  def save 
+  def save
 
-  end 
+  end
 
-  def self.find_by_name 
+  def self.find_by_name
 
-  end 
+  end
 
   def self.find_by
 
