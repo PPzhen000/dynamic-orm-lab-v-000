@@ -17,7 +17,18 @@ class InteractiveRecord
     table_info.each do |row|
       column_names << row['name']
     end
-    column_names.compact 
+    column_names.compact
   end
 
+  self.column_names.each do |col_name|
+    attr_accessor col_name.to_sym
+  end
+
+  def initialize(option={})
+    options.each do |property, value|
+      self.send("#{property}=", value)
+    end
+  end
+
+  def 
 end
